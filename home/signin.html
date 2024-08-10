@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signin.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-cover bg-center bg-no-repeat bg-fixed " 
+style="background-image: url('/Screenshot\ 2024-08-11\ 041433.png')">
+ <nav class="p-5  shadow md:flex md:items-center md:justify-between">
+    <div class="flex justify-between items-center">
+      <span class="text-2xl font-[poppins] cursor-pointer">
+        <img class="h-10 inline" src="/3305212_forest_landscape_mountain_nature_icon.svg" alt=""> 
+      </span>
+      <span class="text-3xl cursor-pointer ma-2 mx-2 md:hidden block">
+         <ion-icon name="menu" onclick="Menu(this)" ></ion-icon>
+         
+      </span>
+     </div>  
+ <ul class="md:flex md:items-center z=[-1] md:z-auto md:static absolute  w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+    <li class="mx-6 my-6 md:my-0 " >
+      <a href="home.html" class="text-x0.03  text-white hover:text-black duration-500"  >HOME</a></li>
+    <li class="mx-6 my-6 md:my-0 ">
+      <a href="team.html" class="text-x0.03 text-white hover:text-black duration-500">TEAMS</a></li>
+    <li class="mx-6 my-6 md:my-0 ">
+      <a href="coursee.html" class="text-x0.03 text-white hover:text-black duration-500">COURSE</a></li>
+    <li class="mx-6 my-6 md:my-0 ">
+      <a href="signin.html" class="text-x0.03 text-white hover:text-black duration-500">SIGN IN</a></li>
+ </ul>
+    </div>
+
+ </nav>
+<div class="flex justify-center items-center min-h-full">
+  <div class="w-96 p-6  backdrop-blur-sm drop-shadow-2xl rounded-md">
+    <h1  class="flex justify-center items-center font-bold text-xl text-white">LOGIN</h1> 
+    <hr class="mt-6"> <br>
+    <div class="mt-3 text-white">
+      <label for="email">Email </label>
+      <input type="text" name="" id="email" 
+      class="text-base px-2 py-1  focus:right-0 focus:border-gray-600"placeholder="Enter Your Email">
+      <br>
+    </div><br>
+    <div class="mt-3 text-white">
+      <label for="phone number">Phone Number </label>
+      <input type="text" name="" id="phone number" 
+      class="text-base px-2 py-1  focus:right-0 focus:border-gray-600"placeholder="Enter Your Email">
+      <br>
+    </div><br>
+    <div class="mt-3 text-white">
+      <label for="password">Password</label>
+      <input type="text" name="" id="password" 
+      class="text-base px-2 py-1  focus:right-0 focus:border-gray-600"placeholder="Enter Your password">
+    </div> <br>
+<hr>
+  <div class="  flex justify-center items-center">
+    <button id="myButton" class="m-4 max-w-sm rounded bg-blue-600 text-white font-[poppins] duration-500 px-6 py-2 mx-4 hover:bg-yellow-600">
+      LOGIN
+     </button>
+  </div>
+
+  <div class="mt-6 flex justify-between items-center text-xs text-white">
+    <div>
+
+    <label for="">Create an Account</label>
+  </div>
+  <div>
+    <a href="#">Forget Password?</a>
+  </div>
+
+</div>
+
+
+
+
+
+ <script>
+    const myButton = document.getElementById('myButton');
+
+myButton.addEventListener('click', () => {
+
+  alert('We Will Send You Email!');
+
+
+});
+   function Menu(e){
+      let list = document.querySelector('ul');
+      if(e.name === 'menu'){
+        e.name = "close";
+        list.classList.add('top-[80px]');
+        list.classList.add('opacity-100');
+      } else {
+        e.name = "menu";
+        list.classList.remove('top-[80px]');
+        list.classList.remove('opacity-100');
+      }
+   }
+</script>
+
+
+
+</body>
+</html>
